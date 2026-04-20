@@ -24,7 +24,13 @@
             
             .logo img {
                 width: 40px;
-            }.navbar ul{
-display:flex;
-list-style:none;
-}
+            }
+            
+            .navbar ul {
+                display: flex;
+                list-style: none;
+            }
+            
+            .navbar ul li {
+                margin-left: 25px;
+            }
