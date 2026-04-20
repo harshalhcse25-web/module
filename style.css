@@ -45,3 +45,10 @@
             .navbar ul li a:hover {
                 color: #7a7812;
             }
+            
+            .hero {
+                background: linear-gradient(to right, #680a31, #a39e4f);
+                color: rgb(19, 15, 15);
+                text-align: center;
+                padding: 70px;
+            }
