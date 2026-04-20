@@ -94,3 +94,10 @@
                 background: #acb7bb;
                 color: white;
             }
+            
+            th,
+            td {
+                padding: 12px;
+                border: 1px solid #dddddd;
+                text-align: center;
+            }
