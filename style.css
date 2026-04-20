@@ -33,4 +33,9 @@
             
             .navbar ul li {
                 margin-left: 25px;
-            }
+            }.navbar ul li a{
+color:rgb(20, 136, 55);
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
