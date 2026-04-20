@@ -89,3 +89,8 @@
                 border-collapse: collapse;
                 background: rgb(97, 87, 87);
             }
+            
+            th {
+                background: #acb7bb;
+                color: white;
+            }
