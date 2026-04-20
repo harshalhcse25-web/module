@@ -1,4 +1,4 @@
-            body {
+                body {
                 margin: 0;
                 font-family: Arial, sans-serif;
                 background-color: #968794;
@@ -101,3 +101,9 @@
                 border: 1px solid #dddddd;
                 text-align: center;
             }
+            
+            footer {
+                background: #0f2027;
+                color: rgb(255, 255, 255);
+                text-align: center;
+                paddi
