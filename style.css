@@ -21,3 +21,7 @@
                 align-items: center;
                 gap: 10px;
             }
+            
+            .logo img {
+                width: 40px;
+            }
