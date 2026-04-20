@@ -15,3 +15,9 @@
                 top: 0;
                 z-index: 1000;
             }
+            
+            .logo {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
