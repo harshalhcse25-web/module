@@ -1,13 +1,17 @@
             body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #968794;
-        }
-        
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 40px;
-            background: linear-gradient(135deg, #7ca2b3, #203a43, #47642c);
-            color: rgb(153, 34, 30);
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background-color: #968794;
+            }
+            
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 40px;
+                background: linear-gradient(135deg, #7ca2b3, #203a43, #47642c);
+                color: rgb(153, 34, 30);
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+            }
