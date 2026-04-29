@@ -80,3 +80,9 @@ top:0,
 behavior:"smooth"
 });
 });
+cards.forEach(card=>{
+card.addEventListener("click",()=>{
+let name=card.querySelector("h3").innerText;
+alert("Faculty Selected: "+name);
+});
+});
