@@ -62,3 +62,15 @@ topBtn.style.border="none";
 topBtn.style.borderRadius="50%";
 topBtn.style.cursor="pointer";
 topBtn.style.display="none";
+document.body.appendChild(topBtn);
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>300){
+topBtn.style.display="block";
+}
+else{
+topBtn.style.display="none";
+}
+
+});
