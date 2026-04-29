@@ -8,3 +8,9 @@ behavior:'smooth'
 });
 });
 });
+let sections=document.querySelectorAll("section");
+let navLinks=document.querySelectorAll(".navbar a");
+
+window.addEventListener("scroll",()=>{
+
+let current="";
