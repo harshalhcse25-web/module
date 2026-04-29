@@ -47,3 +47,8 @@ card.style.transform="scale(1)";
 });
 
 });
+window.onload=function(){
+setTimeout(()=>{
+alert("Welcome to Computer Science Department Website");
+},800);
+};
