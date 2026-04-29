@@ -14,3 +14,13 @@ let navLinks=document.querySelectorAll(".navbar a");
 window.addEventListener("scroll",()=>{
 
 let current="";
+sections.forEach(section=>{
+let top=window.scrollY;
+let offset=section.offsetTop-150;
+let height=section.offsetHeight;
+let id=section.getAttribute("id");
+
+if(top>=offset && top<offset+height){
+current=id;
+}
+});
