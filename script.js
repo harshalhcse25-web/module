@@ -24,3 +24,12 @@ if(top>=offset && top<offset+height){
 current=id;
 }
 });
+navLinks.forEach(link=>{
+link.style.color="";
+
+if(link.getAttribute("href")==="#"+current){
+link.style.color="yellow";
+}
+});
+
+});
