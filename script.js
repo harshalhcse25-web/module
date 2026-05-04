@@ -86,3 +86,10 @@ let name=card.querySelector("h3").innerText;
 alert("Faculty Selected: "+name);
 });
 });
+async function getWeather() {
+  let city = document.getElementById("city").value.trim();
+
+  if (!city) {
+    document.getElementById("result").innerHTML = "Enter city name";
+    return;
+  }
