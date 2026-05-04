@@ -92,18 +92,22 @@ async function getWeather() {
   if (!city) {
     document.getElementById("result").innerHTML = "Enter city name";
     return;
-  }try {
-    let geo = await fetch(https://geocoding-api.open-meteo.com/v1/search?name=${city});
+  }
+
+  try {
+    let geo = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${city}`);
     let geoData = await geo.json();
 
     if (!geoData.results) {
       document.getElementById("result").innerHTML = "❌ City not found";
       return;
-    }   let lat = geoData.results[0].latitude;
+    }
+
+    let lat = geoData.results[0].latitude;
     let lon = geoData.results[0].longitude;
     let name = geoData.results[0].name;
 
-    let weather = await fetch(https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true);
+    let weather = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`);
     let weatherData = await weather.json();
 
     let temp = weatherData.current_weather.temperature;
@@ -111,10 +115,12 @@ async function getWeather() {
 
     document.getElementById("result").innerHTML = `
       <h3>${name}</h3>
-      <p>🌡️ Temperature: ${temp} °C</p>
+      <p>🌡 Temperature: ${temp} °C</p>
       <p>💨 Wind Speed: ${wind} km/h</p>
-    `;document.getElementById("map").src =
-      https://maps.google.com/maps?q=${lat},${lon}&z=12&output=embed;
+    `;
+
+    document.getElementById("map").src =
+      `https://maps.google.com/maps?q=${lat},${lon}&z=12&output=embed`;
 
   } catch (error) {
     document.getElementById("result").innerHTML = "⚠️ Error fetching data";
