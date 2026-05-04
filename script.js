@@ -113,4 +113,11 @@ async function getWeather() {
       <h3>${name}</h3>
       <p>🌡️ Temperature: ${temp} °C</p>
       <p>💨 Wind Speed: ${wind} km/h</p>
-    `;
+    `;document.getElementById("map").src =
+      https://maps.google.com/maps?q=${lat},${lon}&z=12&output=embed;
+
+  } catch (error) {
+    document.getElementById("result").innerHTML = "⚠️ Error fetching data";
+    console.log(error);
+  }
+}
