@@ -92,4 +92,11 @@ async function getWeather() {
   if (!city) {
     document.getElementById("result").innerHTML = "Enter city name";
     return;
-  }
+  }try {
+    let geo = await fetch(https://geocoding-api.open-meteo.com/v1/search?name=${city});
+    let geoData = await geo.json();
+
+    if (!geoData.results) {
+      document.getElementById("result").innerHTML = "❌ City not found";
+      return;
+    }
