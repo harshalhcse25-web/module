@@ -99,4 +99,18 @@ async function getWeather() {
     if (!geoData.results) {
       document.getElementById("result").innerHTML = "❌ City not found";
       return;
-    }
+    }   let lat = geoData.results[0].latitude;
+    let lon = geoData.results[0].longitude;
+    let name = geoData.results[0].name;
+
+    let weather = await fetch(https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true);
+    let weatherData = await weather.json();
+
+    let temp = weatherData.current_weather.temperature;
+    let wind = weatherData.current_weather.windspeed;
+
+    document.getElementById("result").innerHTML = `
+      <h3>${name}</h3>
+      <p>🌡️ Temperature: ${temp} °C</p>
+      <p>💨 Wind Speed: ${wind} km/h</p>
+    `;
