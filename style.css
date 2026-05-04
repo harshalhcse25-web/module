@@ -125,3 +125,9 @@ footer {
         margin: 10px 0;
     }
 }
+
+#map {
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+}
